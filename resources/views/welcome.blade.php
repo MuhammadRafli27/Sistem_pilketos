@@ -8,6 +8,8 @@
     <title>E-Pilketos | SKANIC</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" href="/img/logoskanic.png" class="scale-150">
+    {{-- Swiper CSS --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     @vite('resources/css/app.css')
     <style>
         #home {
@@ -94,6 +96,17 @@
         </div>
     </section>
     <!-- Hiro Section End -->
+
+    <!-- Carousel Section Start -->
+    <section id="carousel" class="pt-24 pb-16 md:py-24">
+        <div class="container">
+            <div class="mx-auto text-center mb-16">
+                <h2 class="font-bold text-dark text-4xl mb-4 sm:text-3xl lg:text-4xl">OSKANIC</h2>
+            </div>
+
+        </div>
+    </section>
+    <!-- Carousel Section End -->
 
     <!-- Panduan Section Start -->
     <section id="panduan" class="py-36">
