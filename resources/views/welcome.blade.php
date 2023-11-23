@@ -108,28 +108,7 @@
     </section>
     <!-- Carousel Section End -->
 
-    <!-- Panduan Section Start -->
-    <section id="panduan" class="py-36">
-        <div class="container">
-            <div class="flex flex-wrap justify-center">
-                <div class="w-full md:w-1/3 h-[14rem] mx-3 my-3" data-aos="fade-up" data-aos-duration="2000">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/g1490nuZnVg"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="w-full md:w-1/3 mx-3 my-3" data-aos="fade-up" data-aos-duration="2500">
-                    <h3 class="font-bold text-3xl">Panduan Penggunaan</h3>
-                    <article>
-                        <p>Ingin tahu bagaimana cara menggunakan sistem kantin kami dengan lancar? Kami telah merilis
-                            video panduan singkat yang akan membimbing Anda melalui langkah-langkah mudah dalam
-                            memanfaatkan sistem ini secara efektif.</p>
-                    </article>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Panduan Section End -->
+
 
 
     <!-- Contact Section Start -->
