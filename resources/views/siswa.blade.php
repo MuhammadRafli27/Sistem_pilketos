@@ -42,17 +42,14 @@
                         </span>
                     </a>
                     <!-- Elemen modal -->
-                    <div
-                        class="modal fixed hidden inset-0 z-50 overflow-auto bg-gray-800 bg-opacity-75 mx-auto">
+                    <div class="modal fixed hidden inset-0 z-50 overflow-auto bg-gray-800 bg-opacity-75 mx-auto">
                         <div class="modal-content w-full max-w-md mx-auto my-10 p-4 rounded-lg bg-white">
                             <div class="flex items-center justify-between space-x-4">
                                 <h1 class="text-xl font-medium text-gray-800 "></h1>
-                                <button  onclick="closeModal()"
-                                    class="text-gray-600 focus:outline-none hover:text-gray-700">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6"
-                                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            stroke-width="2"
+                                <button onclick="closeModal()" class="text-gray-600 focus:outline-none hover:text-gray-700">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
                                 </button>
@@ -62,8 +59,7 @@
                                 <h1 class="text-xl font-semibold text-gray-800 text-center">Import
                                     Data Pemilih</h1>
                                 <div class="mt-6">
-                                    <label for="file"
-                                        class="mb-auto block text-base font-semibold text-gray-800">Upload
+                                    <label for="file" class="mb-auto block text-base font-semibold text-gray-800">Upload
                                         File :
                                     </label>
                                     <input
@@ -75,14 +71,21 @@
                                     <p class="mt-1 text-xs text-gray-500 dark:text-gray-300">
                                         XLX, XLSX or CSV (MAX. 2048).
                                     </p>
-                                    <div class="flex p-2 mb-4 text-sm text- rounded-gray-900 dark:bg-gray-800 dark:text-gray-400 " role="alert">
-                                        <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+                                    <div class="flex p-2 mb-4 text-sm text- rounded-gray-900 dark:bg-gray-800 dark:text-gray-400 "
+                                        role="alert">
+                                        <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3"
+                                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
                                         <span class="sr-only">Info</span>
                                         <div>
-                                          <span class="font-bold text-gray-800">Data yang anda Import Wajib Berisikan :</span>
+                                            <span class="font-bold text-gray-800">Data yang anda Import Wajib Berisikan
+                                                :</span>
                                             <ul class="mt-1.5 ml-4 list-disc list-inside">
-                                              <li class="font-medium">level, username, password, nis, nisn, dan kelas</li>
-                                          </ul>
+                                                <li class="font-medium">level, username, password, nis, nisn, dan kelas</li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -266,7 +269,8 @@
                             @endforeach
                         </tbody>
                     </table>
-                    <div class="border-[1px] border-gray-400 px-5 py-2 flex flex-col xs:flex-row rounded-b-lg items-center xs:justify-between">
+                    <div
+                        class="border-[1px] border-gray-400 px-5 py-2 flex flex-col xs:flex-row rounded-b-lg items-center xs:justify-between">
                         {{ $siswa->withQueryString()->links() }}
                     </div>
                 </div>

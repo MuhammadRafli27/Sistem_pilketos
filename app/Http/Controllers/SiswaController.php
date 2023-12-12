@@ -22,10 +22,10 @@ class SiswaController extends Controller
     {
         $keyword = $request->keyword;
         // $siswas = User::where('level', '!=', 1)->paginate(5);
-        $siswa = User::where('username', 'like', '%'.$keyword. '%')
-            ->orWhere('nis', 'like', '%'.$keyword. '%')
-            ->orWhere('nisn', 'like', '%'.$keyword. '%')
-            ->orWhere('kelas', 'like', '%'.$keyword. '%')->paginate(5);
+        $siswa = User::where('username', 'like', '%' . $keyword . '%')
+            ->orWhere('nis', 'like', '%' . $keyword . '%')
+            ->orWhere('nisn', 'like', '%' . $keyword . '%')
+            ->orWhere('kelas', 'like', '%' . $keyword . '%')->paginate(5);
         return view('/siswa', compact('siswa'));
     }
 
@@ -56,21 +56,22 @@ class SiswaController extends Controller
                 'nis' => 'required|size:10|unique:users',
                 'nisn' => 'required|size:10|unique:users',
                 'kelas' => 'required',
-            ], [
-                'username.required'=>'Username tidak boleh kosong!!!',
-                'password.required'=>'Password tidak boleh kosong!!!',
-                'password.min'=>'Minimal Password 5 Character!!!',
+            ],
+            [
+                'username.required' => 'Username tidak boleh kosong!!!',
+                'password.required' => 'Password tidak boleh kosong!!!',
+                'password.min' => 'Minimal Password 5 Character!!!',
                 'password.max' => 'Maksimal Password 20 Character!!!',
-                'password_confirm.required'=>'Password Confirmation tidak boleh kosong!!!',
-                'password_confirm.min'=>'Minimal Password Confirmation 5 Character!!!',
-                'password_confirm.same'=>'Password Confirmation Tidak Sesuai!!!',
-                'password.unique'=>'Password atau NIS Sudah Ada atau Sudah Terdaftar!!!',
-                'nis.required'=>'NIS tidak boleh kosong!!!',
-                'nis.size'=>'NIS Harus 10 Angka tidak boleh lebih atau kurang!!!',
-                'nis.unique'=>'NIS Sudah Ada atau Sudah Terdaftar!!!',
-                'nisn.required'=>'NISN tidak boleh kosong!!!',
-                'nisn.size'=>'NISN Harus 10 Angka tidak boleh lebih atau kurang!!!',
-                'nisn.unique'=>'NISN Sudah Ada atau Sudah Terdaftar!!!',
+                'password_confirm.required' => 'Password Confirmation tidak boleh kosong!!!',
+                'password_confirm.min' => 'Minimal Password Confirmation 5 Character!!!',
+                'password_confirm.same' => 'Password Confirmation Tidak Sesuai!!!',
+                'password.unique' => 'Password atau NIS Sudah Ada atau Sudah Terdaftar!!!',
+                'nis.required' => 'NIS tidak boleh kosong!!!',
+                'nis.size' => 'NIS Harus 10 Angka tidak boleh lebih atau kurang!!!',
+                'nis.unique' => 'NIS Sudah Ada atau Sudah Terdaftar!!!',
+                'nisn.required' => 'NISN tidak boleh kosong!!!',
+                'nisn.size' => 'NISN Harus 10 Angka tidak boleh lebih atau kurang!!!',
+                'nisn.unique' => 'NISN Sudah Ada atau Sudah Terdaftar!!!',
             ]
         );
         // $validated['password'] = bcrypt($validated['password']);
@@ -98,7 +99,7 @@ class SiswaController extends Controller
      */
     public function edit($id)
     {
-        return view('/edit/ubah-data-siswa',[
+        return view('/edit/ubah-data-siswa', [
             'siswa' => User::find($id)
         ]);
     }
@@ -122,18 +123,19 @@ class SiswaController extends Controller
                 'nis' => 'required|size:10',
                 'nisn' => 'required|size:10',
                 'kelas' => 'required',
-            ], [
-                'username.required'=>'Username tidak boleh kosong!!!',
-                'password.required'=>'Password tidak boleh kosong!!!',
-                'password.min'=>'Minimal Password 5 Character!!!',
+            ],
+            [
+                'username.required' => 'Username tidak boleh kosong!!!',
+                'password.required' => 'Password tidak boleh kosong!!!',
+                'password.min' => 'Minimal Password 5 Character!!!',
                 'password.max' => 'Maksimal Password 20 Character!!!',
-                'password_confirm.required'=>'Password Confirmation tidak boleh kosong!!!',
-                'password_confirm.min'=>'Minimal Password Confirmation 5 Character!!!',
-                'password_confirm.same'=>'Password Confirmation Tidak Sesuai!!!',
-                'nis.required'=>'NIS tidak boleh kosong!!!',
-                'nis.size'=>'NIS Harus 10 Angka tidak boleh lebih atau kurang!!!',
-                'nisn.required'=>'NISN tidak boleh kosong!!!',
-                'nisn.size'=>'NISN Harus 10 Angka tidak boleh lebih atau kurang!!!',
+                'password_confirm.required' => 'Password Confirmation tidak boleh kosong!!!',
+                'password_confirm.min' => 'Minimal Password Confirmation 5 Character!!!',
+                'password_confirm.same' => 'Password Confirmation Tidak Sesuai!!!',
+                'nis.required' => 'NIS tidak boleh kosong!!!',
+                'nis.size' => 'NIS Harus 10 Angka tidak boleh lebih atau kurang!!!',
+                'nisn.required' => 'NISN tidak boleh kosong!!!',
+                'nisn.size' => 'NISN Harus 10 Angka tidak boleh lebih atau kurang!!!',
             ]
         );
         // $validated['password'] = bcrypt($validated['password']);
@@ -161,19 +163,21 @@ class SiswaController extends Controller
 
     public function updatePassword(Request $request)
     {
-        $request->validate([
-            'current_password' => 'required',
-            'password' => 'required|min:5|max:20|confirmed',
-            'password_confirmation' => 'required|min:5|max:20'
-        ],[
-            'current_password.current_password' => 'Password lama tidak boleh kosong!!!',
-            'password.required' => 'Password baru tidak boleh kosong!!!',
-            'password.min' => 'Minimal Password baru 5 Character!!!',
-            'password.max' => 'Maksimal Password baru 20 Character!!!',
-            'password_confirmation' => 'Password Confirmation tidak boleh kosong!!!',
-            'password_confirmation.min' => 'Minimal Password Confirmation 5 Character!!!',
-            'password_confirmation.max' => 'Minimal Password Confirmation 20 Character!!!',
-        ]
+        $request->validate(
+            [
+                'current_password' => 'required',
+                'password' => 'required|min:5|max:20|confirmed',
+                'password_confirmation' => 'required|min:5|max:20'
+            ],
+            [
+                'current_password.current_password' => 'Password lama tidak boleh kosong!!!',
+                'password.required' => 'Password baru tidak boleh kosong!!!',
+                'password.min' => 'Minimal Password baru 5 Character!!!',
+                'password.max' => 'Maksimal Password baru 20 Character!!!',
+                'password_confirmation' => 'Password Confirmation tidak boleh kosong!!!',
+                'password_confirmation.min' => 'Minimal Password Confirmation 5 Character!!!',
+                'password_confirmation.max' => 'Minimal Password Confirmation 20 Character!!!',
+            ]
         );
 
         if (Hash::check($request->current_password, auth()->user()->password)) {
@@ -187,13 +191,15 @@ class SiswaController extends Controller
     }
     public function importexcel(Request $request)
     {
-        $file = $request->validate([
-            'file' => 'required|mimes:xls,xlsx,csv|max:2048'
-        ],[
-            'file.required' => 'File ini tidak boleh kosong!!!',
-            'file.mimes' => 'File yang anda upload bukan XlS, XLSX, or CSV!!!',
-            'file.max' => 'Maksimal File yang anda masukan 2048'
-        ]
+        $file = $request->validate(
+            [
+                'file' => 'required|mimes:xls,xlsx,csv|max:2048'
+            ],
+            [
+                'file.required' => 'File ini tidak boleh kosong!!!',
+                'file.mimes' => 'File yang anda upload bukan XlS, XLSX, or CSV!!!',
+                'file.max' => 'Maksimal File yang anda masukan 2048'
+            ]
         );
 
         //Ambil file Excel dari form upload
@@ -209,7 +215,7 @@ class SiswaController extends Controller
         $header = array_shift($rows);
 
         //Proses data baris per baris
-        foreach ($rows as $row){
+        foreach ($rows as $row) {
             $data = array_combine($header, $row);
 
             //Simpan data ke database
@@ -226,4 +232,3 @@ class SiswaController extends Controller
         return redirect('/siswa')->with('success', 'Data Excel Berhasil DiImport!!!');
     }
 }
-?>
