@@ -30,6 +30,7 @@
         @media screen and (max-width: 768px) {
             #home {
                 background-image: none;
+                background-color: #77C8F1;
             }
         }
     </style>
@@ -42,8 +43,7 @@
         <div class="container">
             <div class="flex items-center justify-between relative">
                 <div class="px-4">
-                    <a href="#home" class="font-[1000] text-xl text-blue block py-6 tracking-tight"
-                        style="-webkit-text-stroke: 0.1rem text-dark">E-Pilketos</a>
+                    <a href="#home" class="font-[1000] text-xl text-blue block py-6 tracking-tight">SMKN 1 Ciomas</a>
                 </div>
                 <div class="flex items-center px-4">
                     <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
@@ -73,11 +73,13 @@
         <div class="container">
             <div class="flex flex-wrap">
                 <div data-aos="fade-right" data-aos-duration="2000"
-                    class="w-full px-4 lg:w-1/2 text-center md:text-left lg:mt-32 md:mt-8 sm:mt-10">
-                    <h1 class="md:text-3xl lg:text-5xl block font-bold text-blue text-3xl">
+                    class="w-full px-4 lg:w-1/2 text-center md:text-left lg:mt-24 md:mt-8 sm:mt-10">
+                    <h1 class="md:text-3xl lg:text-5xl block font-bold text-dark text-3xl"
+                        style="-webkit-text-stroke: 0.1rem #ffff">
                         Sistem Informasi <span> Pemilihan Ketua Osis</span>
                     </h1>
-                    <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl md:text-xl sm:text-lg">Sistem
+                    <h2 class="font-medium text-lg mb-5 lg:text-2xl md:text-xl sm:text-lg text-indigo">
+                        Sistem
                         Informasi ini
                         dibuat
                         untuk
@@ -88,7 +90,7 @@
 
                 <div data-aos="zoom-in-up" data-aos-duration="2000" class="w-full self-end px-4 lg:w-1/2">
                     <div class="relative mt-8 lg:mt-4 lg:right-0">
-                        <img width="500" height="800" src="/img/background1.png" alt="bg"
+                        <img width="400" height="500" src="/img/logo-vote.png" alt="bg"
                             class="relative z-10 max-w-full mx-auto">
                     </div>
                 </div>

@@ -14,12 +14,10 @@ module.exports = {
         },
         extend: {
             colors: {
-                dark: "#0f1722",
+                dark: "#021849",
                 gray: "#4A4DE8",
-                blue: "#171C92",
-                secondary: "#64748b",
-                aqua: "#7FA6F4",
-                cyan: "#92F2F5",
+                blue: "#238FD4",
+                indigo: "#121348",
             },
             screens: {
                 "2xl": "1320px",
